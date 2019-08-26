@@ -8,9 +8,11 @@
 
 import Foundation
 class UserViewModel{
-    
+    //    MARK:- Properties
     var userObserver = GenericDynamic<[Users]>([Users]())
-
+    
+    //    MARK:- Func Get Data
+    //    Get Data From Server
     func getData(){
         Api.getUserList { (users:[Users]?) in
             guard let users = users else{return}

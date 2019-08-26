@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		077156FC6175997DFE35EEBA /* Pods_ObserverPatternProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9055378D09FF901D58535FF5 /* Pods_ObserverPatternProject.framework */; };
+		D02791F72313EECE00E92EF4 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02791F62313EECE00E92EF4 /* CreatePostViewController.swift */; };
+		D02791F92313F48A00E92EF4 /* CreatPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02791F82313F48A00E92EF4 /* CreatPostModel.swift */; };
 		D028668623127DC50035C121 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028668523127DC50035C121 /* UserCell.swift */; };
+		D0286689231287FF0035C121 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0286688231287FF0035C121 /* ApiRouter.swift */; };
 		D053B780230D8A7B00F4272C /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053B77F230D8A7B00F4272C /* Observer.swift */; };
 		D0E8253F230C2DF700B4738E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8253E230C2DF700B4738E /* AppDelegate.swift */; };
 		D0E82541230C2DF700B4738E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E82540230C2DF700B4738E /* ViewController.swift */; };
@@ -23,7 +26,10 @@
 /* Begin PBXFileReference section */
 		9055378D09FF901D58535FF5 /* Pods_ObserverPatternProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObserverPatternProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4E3F8CE12E39A91A59D0EA /* Pods-ObserverPatternProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObserverPatternProject.debug.xcconfig"; path = "Target Support Files/Pods-ObserverPatternProject/Pods-ObserverPatternProject.debug.xcconfig"; sourceTree = "<group>"; };
+		D02791F62313EECE00E92EF4 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		D02791F82313F48A00E92EF4 /* CreatPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatPostModel.swift; sourceTree = "<group>"; };
 		D028668523127DC50035C121 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		D0286688231287FF0035C121 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		D053B77F230D8A7B00F4272C /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		D0E8253B230C2DF700B4738E /* ObserverPatternProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObserverPatternProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E8253E230C2DF700B4738E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +73,58 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D02791F22313EE8100E92EF4 /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				D02791F52313EEA300E92EF4 /* Model */,
+				D02791F42313EE9C00E92EF4 /* ViewModel */,
+				D02791F32313EE9600E92EF4 /* View */,
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		D02791F32313EE9600E92EF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D02791F62313EECE00E92EF4 /* CreatePostViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D02791F42313EE9C00E92EF4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D02791F52313EEA300E92EF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D02791F82313F48A00E92EF4 /* CreatPostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D02791FA2313F96D00E92EF4 /* Users List */ = {
+			isa = PBXGroup;
+			children = (
+				D0E82552230C2F7400B4738E /* View */,
+				D0E82551230C2F6600B4738E /* ViewModel */,
+				D0E82550230C2F5900B4738E /* Model */,
+			);
+			path = "Users List";
+			sourceTree = "<group>";
+		};
+		D0286687231287D80035C121 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D053B77F230D8A7B00F4272C /* Observer.swift */,
+				D0286688231287FF0035C121 /* ApiRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		D0E82532230C2DF700B4738E = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +146,9 @@
 		D0E8253D230C2DF700B4738E /* ObserverPatternProject */ = {
 			isa = PBXGroup;
 			children = (
-				D0E82552230C2F7400B4738E /* Controller */,
-				D0E82551230C2F6600B4738E /* ViewModel */,
-				D0E82550230C2F5900B4738E /* Model */,
+				D02791F22313EE8100E92EF4 /* CreatePost */,
+				D0286687231287D80035C121 /* Network */,
+				D02791FA2313F96D00E92EF4 /* Users List */,
 				D0E8253E230C2DF700B4738E /* AppDelegate.swift */,
 				D0E82542230C2DF700B4738E /* Main.storyboard */,
 				D0E82545230C2DF900B4738E /* Assets.xcassets */,
@@ -113,18 +171,17 @@
 			isa = PBXGroup;
 			children = (
 				D0E82553230C2F9000B4738E /* UserViewModel.swift */,
-				D053B77F230D8A7B00F4272C /* Observer.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		D0E82552230C2F7400B4738E /* Controller */ = {
+		D0E82552230C2F7400B4738E /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D0E82540230C2DF700B4738E /* ViewController.swift */,
 				D028668523127DC50035C121 /* UserCell.swift */,
 			);
-			path = Controller;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +311,12 @@
 				D0E82541230C2DF700B4738E /* ViewController.swift in Sources */,
 				D053B780230D8A7B00F4272C /* Observer.swift in Sources */,
 				D0E82554230C2F9000B4738E /* UserViewModel.swift in Sources */,
+				D02791F92313F48A00E92EF4 /* CreatPostModel.swift in Sources */,
 				D0E82558230C2FC600B4738E /* Users.swift in Sources */,
 				D0E82556230C2FB800B4738E /* UserModel.swift in Sources */,
+				D0286689231287FF0035C121 /* ApiRouter.swift in Sources */,
 				D0E8253F230C2DF700B4738E /* AppDelegate.swift in Sources */,
+				D02791F72313EECE00E92EF4 /* CreatePostViewController.swift in Sources */,
 				D028668623127DC50035C121 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

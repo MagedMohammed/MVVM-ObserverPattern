@@ -31,9 +31,7 @@ class ViewController: UIViewController {
             self.userData = users
             self.userTableView.reloadData()
         })
-        
     }
-    
 }
 
 
@@ -49,8 +47,7 @@ extension ViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UserCell = userTableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
         cell.textLabel?.text = self.userData[indexPath.row].username
+        
         return cell
     }
-    
-    
 }
